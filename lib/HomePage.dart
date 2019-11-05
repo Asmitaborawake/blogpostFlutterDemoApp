@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:async/async.dart';
 import 'dart:async';
 import 'DetailPage.dart';
+import 'FirstPage.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -59,6 +60,9 @@ class _HomeState extends State<Home> {
               ListTile(
                 title: Text('First Page'),
                 leading: Icon(Icons.face, color: Colors.purple),
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FirstPage()));
+                },
               ),
               ListTile(
                 title: Text('Second Page'),
